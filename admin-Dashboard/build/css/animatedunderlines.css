@@ -1,0 +1,49 @@
+p {
+  position: relative;
+}
+p:before, p:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 0px;
+  height: 1px;
+  margin: 5px 0 0;
+  transition: width 2s linear;
+  -webkit-transition: width 2s linear;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+}
+p.hover-1:after {
+  left: 0;
+  background-color: #ffffff;
+}
+p.hover-2:after {
+  right: 0;
+  background-color: #ffffff;
+}
+p.hover-3:before {
+  left: calc(50%);
+  background-color: #ffffff;
+}
+p.hover-3:after {
+  right: calc(50%);
+  background-color: #ffffff;
+}
+p.hover-4:before {
+  left: 0;
+  background-color: #ffffff;
+}
+p.hover-4:after {
+  right: 0;
+  background-color: #ffffff;
+}
+div.anim-underline:hover {
+  cursor: pointer;
+}
+div.anim-underline:hover p:before, div.anim-underline:hover p:after {
+  width: 100%;
+  opacity: 1;
+}
+div.anim-underline:hover p.hover-3:before, div.anim-underline:hover p.hover-3:after, div.anim-underline:hover p.hover-4:before, div.anim-underline:hover p.hover-4:after {
+  width: 50%;
+}

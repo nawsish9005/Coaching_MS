@@ -1,0 +1,605 @@
+// alert(yarn_warp);
+      // alert(yarn_warp_value1);
+      // alert(yarn_warp_value2);
+      // alert(yarn_warp_cond1);
+      // alert(yarn_warp_cond2);
+
+      // if(yarn_warp_cond1 == '(' && yarn_warp_cond2 == ')')
+      // {
+      //   if ( (!(yarn_warp_value1 < yarn_warp)) && (!(yarn_warp_value2 > yarn_warp)) )
+      //   {
+      //     alert("problem ( and )");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok ( and )";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == '(' && yarn_warp_cond2 == ']' )
+      // {
+      //   if ( !(yarn_warp_value1 < yarn_warp) && !(yarn_warp_value2 >= yarn_warp) )
+      //   {
+      //     alert("problem ( and ]");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok ( and ]";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == '(' && yarn_warp_cond2 == '[' )
+      // {
+      //   if ( !(yarn_warp_value1 < yarn_warp) && !(yarn_warp_value2 <= yarn_warp) )
+      //   {
+      //     alert("problem  ( and [");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok ( and [";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == '[' && yarn_warp_cond2 == ')' )
+      // {
+      //   if ( !(yarn_warp_value1 <= yarn_warp) && !(yarn_warp_value2 > yarn_warp) )
+      //   {
+      //     alert("problem [ and )");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok [ and )";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == '[' && yarn_warp_cond2 == ']' )
+      // {
+      //   if ( !(yarn_warp_value1 <= yarn_warp) && !(yarn_warp_value2 >= yarn_warp) )
+      //   {
+      //     alert("problem [ and ]");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok [ and ]";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == '[' && yarn_warp_cond2 == '[' )
+      // {
+      //   if ( !(yarn_warp_value1 <= yarn_warp) && !(yarn_warp_value2 <= yarn_warp) )
+      //   {
+      //     alert("problem [ and [");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok [ and [";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == ']' && yarn_warp_cond2 == ')' )
+      // {
+      //   if ( !(yarn_warp_value1 >= yarn_warp) && !(yarn_warp_value2 > yarn_warp) )
+      //   {
+      //     alert("problem ] and )");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok ] and )";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == ']' && yarn_warp_cond2 == ']' )
+      // {
+      //   if ( !(yarn_warp_value1 >= yarn_warp) && !(yarn_warp_value2 >= yarn_warp) )
+      //   {
+      //     alert("problem ] and ]");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok ] and ]";
+      //   }
+      // }
+
+      // else if( yarn_warp_cond1 == ']' && yarn_warp_cond2 == '[' )
+      // {
+      //   if ( !(yarn_warp_value1 >= yarn_warp) && !(yarn_warp_value2 <= yarn_warp) )
+      //   {
+      //     alert("problem ] and [");
+      //     //document.getElementById("yarn_count_warp").style.color = "#ff0000";
+      //   }
+      //   else
+      //   {
+      //     alert("ok ] and [";
+      //   }
+      // }
+
+                                    if (($problem_condition1 == "problem") && ($problem_condition2 == "problem")) 
+                                      {
+                                        ?>
+                                        <td bgcolor="#FF0000" ><?php echo $row['yarn_warp'] ?></td>
+                                        <?php
+                                      }
+
+                                      else if ( ($ok1 == "ok") && ($ok2 == "ok") )
+                                      {
+                                        ?>
+                                          <td bgcolor="#00FF00"><?php echo $row['yarn_warp'] ?></td>
+                                        <?php
+                                      }
+
+                                      else
+                                      {
+                                        ?>
+                                          <td bgcolor="#FF0000" ><?php echo $row['yarn_warp'] ?></td>
+                                        <?php
+                                      }
+
+
+
+
+                                    <!-- php code for yarn weft -->
+                                    <?php
+                                      if($yarn_weft_cond1 == 1)
+                                      {
+                                        if ( !($yarn_weft_value1 < $row['yarn_weft']) )
+                                        {
+                                          $problem_yarn_weft1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_yarn_weft1 = "ok";
+                                        }
+                                      }
+                                      
+                                      else
+                                      {
+                                        if ( !($yarn_weft_value1 <=  $row['yarn_weft']) )
+                                        {
+                                          $problem_yarn_weft1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_yarn_weft1 = "ok";
+                                        }
+                                      }
+
+                                      if($yarn_weft_cond2 == 1)
+                                      {
+                                        if ( !($yarn_weft_value2 > $row['yarn_weft']) )
+                                        {
+                                          $problem_yarn_weft2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_yarn_weft2 = "ok";
+                                        }
+                                      }
+
+                                      else 
+                                      {
+                                        if ( !($yarn_weft_value2 >= $row['yarn_weft']) )
+                                        {
+                                          $problem_yarn_weft2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_yarn_weft2 = "ok";
+                                        }
+                                      }
+
+                                      if (($problem_yarn_weft1 == "problem") && ($problem_yarn_weft2 == "problem")) 
+                                      {
+                                        ?>
+                                        <td bgcolor="#FF0000" ><?php echo $row['yarn_weft'] ?></td>
+                                        <?php
+                                      }
+
+                                      else if ( ($ok_yarn_weft1 == "ok") && ($ok_yarn_weft2 == "ok") )
+                                      {
+                                        ?>
+                                          <td bgcolor="#00FF00"><?php echo $row['yarn_weft'] ?></td>
+                                        <?php
+                                      }
+
+                                      else
+                                      {
+                                        ?>
+                                          <td bgcolor="#FF0000" ><?php echo $row['yarn_weft'] ?></td>
+                                        <?php
+                                      }
+                                    ?>
+
+                                    <!-- thread epi condition -->
+                                    <?php
+                                      if($thread_epi_cond1 == 1)
+                                      {
+                                        if ( !($thread_epi_value1 < $row['thread_epi']) )
+                                        {
+                                          $problem_thread_epi1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_epi1 = "ok";
+                                        }
+                                      }
+                                      else
+                                      {
+                                        if ( !($thread_epi_value1 <=  $row['thread_epi']) )
+                                        {
+                                          $problem_thread_epi1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_epi1 = "ok";
+                                        }
+                                      }
+
+                                      if($thread_epi_cond2 == 1)
+                                      {
+                                        if ( !($thread_epi_value2 > $row['thread_epi']) )
+                                        {
+                                          $problem_thread_epi2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_epi2 = "ok";
+                                        }
+                                      }
+
+                                      else 
+                                      {
+                                        if ( !($thread_epi_value2 >= $row['thread_epi']) )
+                                        {
+                                          $problem_thread_epi2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_epi2 = "ok";
+                                        }
+                                      }
+
+                                      if (($problem_thread_epi1 == "problem") && ($problem_thread_epi2 == "problem")) 
+                                      {
+                                        ?>
+                                        <td bgcolor="#FF0000" ><?php echo $row['thread_epi'] ?></td>
+                                        <?php
+                                      }
+
+                                      else if ( ($ok_thread_epi1 == "ok") && ($ok_thread_epi2 == "ok") )
+                                      {
+                                        ?>
+                                          <td bgcolor="#00FF00"><?php echo $row['thread_epi'] ?></td>
+                                        <?php
+                                      }
+
+                                      else
+                                      {
+                                        ?>
+                                          <td bgcolor="#FF0000" ><?php echo $row['thread_epi'] ?></td>
+                                        <?php
+                                      }
+                                    ?>
+
+                                    <!-- thread ppi condition -->
+                                    <?php
+                                      if($thread_ppi_cond1 == 1)
+                                      {
+                                        if ( !($thread_ppi_value1 < $row['thread_ppi']) )
+                                        {
+                                          $problem_thread_ppi1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_ppi1 = "ok";
+                                        }
+                                      }
+                                      else
+                                      {
+                                        if ( !($thread_ppi_value1 <=  $row['thread_ppi']) )
+                                        {
+                                          $problem_thread_ppi1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_ppi1 = "ok";
+                                        }
+                                      }
+
+                                      if($thread_ppi_cond2 == 1)
+                                      {
+                                        if ( !($thread_ppi_value2 > $row['thread_ppi']) )
+                                        {
+                                          $problem_thread_ppi2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_ppi2 = "ok";
+                                        }
+                                      }
+
+                                      else 
+                                      {
+                                        if ( !($thread_ppi_value2 >= $row['thread_ppi']) )
+                                        {
+                                          $problem_thread_ppi2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_thread_ppi2 = "ok";
+                                        }
+                                      }
+
+                                      if (($problem_thread_ppi1 == "problem") && ($problem_thread_ppi2 == "problem")) 
+                                      {
+                                        ?>
+                                        <td bgcolor="#FF0000" ><?php echo $row['thread_ppi'] ?></td>
+                                        <?php
+                                      }
+
+                                      else if ( ($ok_thread_ppi1 == "ok") && ($ok_thread_ppi2 == "ok") )
+                                      {
+                                        ?>
+                                          <td bgcolor="#00FF00"><?php echo $row['thread_ppi'] ?></td>
+                                        <?php
+                                      }
+
+                                      else
+                                      {
+                                        ?>
+                                          <td bgcolor="#FF0000" ><?php echo $row['thread_ppi'] ?></td>
+                                        <?php
+                                      }
+                                    ?>
+
+                                    <!-- gsm condition -->
+                                    <?php
+                                      if($gsm_warp_cond1 == 1)
+                                      {
+                                        if ( !($gsm_warp_value1 < $row['gsm']) )
+                                        {
+                                          $problem_gsm1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_gsm1 = "ok";
+                                        }
+                                      }
+                                      else
+                                      {
+                                        if ( !($gsm_warp_value1 <=  $row['gsm']) )
+                                        {
+                                          $problem_gsm1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_gsm1 = "ok";
+                                        }
+                                      }
+
+                                      if($gsm_warp_cond2 == 1)
+                                      {
+                                        if ( !($gsm_warp_value2 > $row['gsm']) )
+                                        {
+                                          $problem_gsm2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_gsm2 = "ok";
+                                        }
+                                      }
+
+                                      else 
+                                      {
+                                        if ( !($gsm_warp_value2 >= $row['gsm']) )
+                                        {
+                                          $problem_gsm2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_gsm2 = "ok";
+                                        }
+                                      }
+
+                                      if (($problem_gsm1 == "problem") && ($problem_gsm2 == "problem")) 
+                                      {
+                                        ?>
+                                        <td bgcolor="#FF0000" ><?php echo $row['gsm'] ?></td>
+                                        <?php
+                                      }
+
+                                      else if ( ($ok_gsm1 == "ok") && ($ok_gsm2 == "ok") )
+                                      {
+                                        ?>
+                                          <td bgcolor="#00FF00"><?php echo $row['gsm'] ?></td>
+                                        <?php
+                                      }
+
+                                      else
+                                      {
+                                        ?>
+                                          <td bgcolor="#FF0000" ><?php echo $row['gsm'] ?></td>
+                                        <?php
+                                      }
+                                    ?>
+
+                                    <!-- fiber wamp condition -->
+                                    <?php
+                                      if($fiber_warp_cond1 == 1)
+                                      {
+                                        if ( !($fiber_warp_value1 < $row['fiber_warp']) )
+                                        {
+                                          $problem_fiber_warp1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_warp1 = "ok";
+                                        }
+                                      }
+                                      else
+                                      {
+                                        if ( !($fiber_warp_value1 <=  $row['fiber_warp']) )
+                                        {
+                                          $problem_fiber_warp1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_warp1 = "ok";
+                                        }
+                                      }
+
+                                      if($fiber_warp_cond2 == 1)
+                                      {
+                                        if ( !($fiber_warp_value2 > $row['fiber_warp']) )
+                                        {
+                                          $problem_fiber_warp2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_warp2 = "ok";
+                                        }
+                                      }
+
+                                      else 
+                                      {
+                                        if ( !($fiber_warp_value2 >= $row['fiber_warp']) )
+                                        {
+                                          $problem_fiber_warp2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_warp2 = "ok";
+                                        }
+                                      }
+
+                                      if (($problem_fiber_warp1 == "problem") && ($problem_fiber_warp2 == "problem")) 
+                                      {
+                                        ?>
+                                        <td bgcolor="#FF0000" ><?php echo $row['fiber_warp'] ?></td>
+                                        <?php
+                                      }
+
+                                      else if ( ($ok_fiber_warp1 == "ok") && ($ok_fiber_warp2 == "ok") )
+                                      {
+                                        ?>
+                                          <td bgcolor="#00FF00"><?php echo $row['fiber_warp'] ?></td>
+                                        <?php
+                                      }
+
+                                      else
+                                      {
+                                        ?>
+                                          <td bgcolor="#FF0000" ><?php echo $row['fiber_warp'] ?></td>
+                                        <?php
+                                      }
+                                    ?>
+
+                                    <!-- thread ppi condition -->
+                                    <?php
+                                      if($fiber_weft_cond1 == 1)
+                                      {
+                                        if ( !($fiber_weft_value1 < $row['fiber_weft']) )
+                                        {
+                                          $problem_fiber_weft1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_weft1 = "ok";
+                                        }
+                                      }
+                                      else
+                                      {
+                                        if ( !($fiber_weft_value1 <=  $row['fiber_weft']) )
+                                        {
+                                          $problem_fiber_weft1 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_weft1 = "ok";
+                                        }
+                                      }
+
+                                      if($fiber_weft_cond2 == 1)
+                                      {
+                                        if ( !($fiber_weft_value2 > $row['fiber_weft']) )
+                                        {
+                                          $problem_fiber_weft2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_weft2 = "ok";
+                                        }
+                                      }
+
+                                      else 
+                                      {
+                                        if ( !($fiber_weft_value2 >= $row['fiber_weft']) )
+                                        {
+                                          $problem_fiber_weft2 = "problem";
+                                        }
+                                        else
+                                        {
+                                          $ok_fiber_weft2 = "ok";
+                                        }
+                                      }
+
+                                      if (($problem_fiber_weft1 == "problem") && ($problem_fiber_weft2 == "problem")) 
+                                      {
+                                        ?>
+                                        <td bgcolor="#FF0000" ><?php echo $row['fiber_weft'] ?></td>
+                                        <?php
+                                      }
+
+                                      else if ( ($ok_fiber_weft1 == "ok") && ($ok_fiber_weft2 == "ok") )
+                                      {
+                                        ?>
+                                          <td bgcolor="#00FF00" ><?php echo $row['fiber_weft'] ?></td>
+                                        <?php
+                                      }
+
+                                      else
+                                      {
+                                        ?>
+                                          <td bgcolor="#FF0000" ><?php echo $row['fiber_weft'] ?></td>
+                                        <?php
+                                      }
+                                    ?>
+
+
+
+
+
+
+                                    <?php 
+                                        $pp_no_select = $row['pp_no'];
+                                        $color = $row['color'];
+                                        $version = $row['version'];
+                                        $gray_width = $row['gray_width'];
+
+                                        $sql_for_gray_issue = "SELECT * FROM greige_issunce 
+                                                               WHERE pp_no = '$pp_no_select'
+                                                               AND color = '$color'
+                                                               AND version = '$version'
+                                                               AND gray_width = '$gray_width' ";
+                                        $res_for_gray_issue = mysqli_query($con, $sql_for_gray_issue);
+                                        $row_for_gray_issue = mysqli_num_rows($res_for_gray_issue);
+
+                                        if ($row_for_gray_issue >= 1) {
+                                          ?>
+                                            <form action="greige_issunce_view.php" method="post" style="display: inline;">
+                                              <input type="hidden" id="pp_no" name="pp_no" value="<?php echo $row['pp_no']; ?>">
+                                              <input type="hidden" id="version" name="version" value="<?php echo $row['version']; ?>">
+                                              <input type="hidden" id="color" name="color" value="<?php echo $row['color']; ?>">
+                                              <input type="hidden" id="gray_width" name="gray_width" value="<?php echo $row['gray_width']; ?>">
+                                              <button type="submit" id="gray_issue_add_btn" name="gray_issue_add_btn" class="btn btn-primary btn-xs"> View </button>
+                                            </form>
+                                          <?php
+                                        }
+                                      ?>
